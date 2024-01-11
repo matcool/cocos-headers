@@ -141,7 +141,7 @@ public:
     inline CCScene* getRunningScene(void) { return m_pRunningScene; }
 
     /** Get the FPS value */
-    inline double getAnimationInterval(void) { return m_dAnimationInterval; }
+    double getAnimationInterval();
     /** Set the FPS value. */
     virtual void setAnimationInterval(double dValue) = 0;
 
@@ -163,10 +163,10 @@ public:
     void setNextDeltaTimeZero(bool bNextDeltaTimeZero);
 
     /** Whether or not the Director is paused */
-    inline bool isPaused(void) { return m_bPaused; }
+    bool isPaused(void);
 
     /** How many frames were called since the director started */
-    inline unsigned int getTotalFrames(void) { return m_uTotalFrames; }
+    unsigned int getTotalFrames(void);
     
     /** Sets an OpenGL projection
      @since v0.8.2
